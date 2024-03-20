@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <header>
+        <div class="caja">
+        <h1><img src="imagenes/encriptador.jpg" alt="encriptador"></h1>
+        <h1>Encriptador</h1>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="left-section">
+            <label for="message">Mensaje:</label>
+            <textarea id="message" placeholder="Captura aquí el texto" oninput="validarInput()" required></textarea>
+            <p id="warningMessage"></p>
+            <button id="cifrarBtn" onclick="encriptar()" class="enc">Cifrar</button>
+            <button id="descrifrarBtn" onclick="descifrar()" class="enc">Descifrar</button>
+            
+        </div>
+        <div class="right-section">
+            <label for="output">Resultado:</label>
+            <textarea id="output" readonly></textarea>
+            <p id="alertMessage">Texto copiado al portapapeles</p>
+            <button onclick="copiar()" class="encop">Copiar</button>
+        </div>
+    </div>
+
+    <footer>
+        
+        <p class="copyrigth">&copy Blanca Esthela Barrón Serrano - 2024</p>
+    </footer>
+    
+    <script defer src="encrip.js"></script>
+
+
+</body>
+</html>
